@@ -15,3 +15,8 @@ const connection = mysql.createConnection({
     password: '',
     database: '',
   });
+
+  connection.connect((err) => {
+    if (err) throw err;
+    runSearch();
+  });
